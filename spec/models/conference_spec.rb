@@ -1,9 +1,29 @@
+require 'rails_helper'
+
 describe Conference do
   let(:conference) { Conference.create  name: "GoGaGaGaGa: The Spoon Conf",
                                         location: "Seattle, WA",
                                         code_of_conduct: true,
                                         childcare: true
   }
+
+  let(:other_conference) { Conference.create  name: "TrololololConf",
+                                              location: "Oakland, CA"
+  }
+
+  let!(:cfp) { Call.create due_date: "2015/07/04",
+                          conference: conference
+  }
+
+  context "current call for proposals" do
+    it "has a current call for proposals for conferences with cfps" do
+      expect(conference.current_call).to eq cfp.due_date
+    end
+
+    it "indicates there is no cfp yet for conferences without calls" do
+      expect(other_conference.current_call).to eq false
+    end
+  end
 
   it "has a name" do
     expect(conference.name).to eq "GoGaGaGaGa: The Spoon Conf"

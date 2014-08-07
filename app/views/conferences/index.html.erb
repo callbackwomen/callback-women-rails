@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Code of Conduct</th>
+    <th>Childcare</th>
+    <th>Call for Proposal</th>
+  </tr>
+  <% @conferences.each do |conference| %>
+    <tr>
+      <td>
+        <%= conference.name %>
+      </td>
+      <td>
+        <%= conference.location %>
+      </td>
+      <td>
+        <%= conference.code_of_conduct %>
+      </td>
+      <td>
+        <%= conference.childcare %>
+      </td>
+      <td>
+        <% if conference.current_call %>
+          conference.current_call
+        <% else %>
+          <%= link_to "Add CfP", new_conference_call_path(conference) %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>
