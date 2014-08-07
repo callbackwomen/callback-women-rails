@@ -1,19 +1,11 @@
 require 'rails_helper'
 
 describe Conference do
-  let(:conference) { Conference.create  name: "GoGaGaGaGa: The Spoon Conf",
-                                        location: "Seattle, WA",
-                                        code_of_conduct: true,
-                                        childcare: true
-  }
-
-  let(:other_conference) { Conference.create  name: "TrololololConf",
-                                              location: "Oakland, CA"
-  }
-
-  let!(:cfp) { Call.create due_date: "2015/07/04",
-                          conference: conference
-  }
+  let(:conference) { FactoryGirl.create :conference }
+  let(:other_conference) { FactoryGirl.create :conference,
+                                              name: "TrololololConf",
+                                              location: "Oakland, CA" }
+  let!(:cfp) { FactoryGirl.create :call, conference: conference }
 
   context "current call for proposals" do
     it "has a current call for proposals for conferences with cfps" do
