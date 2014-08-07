@@ -1,8 +1,36 @@
 describe Conference do
-  it "has a location"
-  it "may have a code of conduct"
+  let(:conference) { Conference.create  name: "GoGaGaGaGa: The Spoon Conf",
+                                        location: "Seattle, WA",
+                                        has_code_of_conduct: true,
+                                        has_childcare: true
+  }
+
+  it "has a name" do
+    expect(conference.name).to eq "GoGaGaGaGa: The Spoon Conf"
+  end
+  it { should validate_presence_of :name }
+
+  it "has a location" do
+    expect(conference.location).to eq "Seattle, WA"
+  end
+  it { should validate_presence_of :location }
+
+  it "may have a code of conduct" do
+    # TODO write a case for default
+    expect(conference.has_code_of_conduct?).to be true
+  end
+
+  it "may have childcare" do
+    # TODO write a case for default
+    expect(conference.has_childcare?).to be true
+  end
+
+
+  it "may have last year's attendance" do
+    # TODO write a case for non-default
+    expect(conference.last_years_attendance).to eq 0
+  end
+
   it "has many topics"
-  it "may have childcare"
-  it "may have last year's attendance"
   it "has many talk lengths"
 end

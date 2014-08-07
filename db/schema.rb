@@ -25,6 +25,10 @@ ActiveRecord::Schema.define(version: 20140807005226) do
 
   create_table "conferences", force: true do |t|
     t.string   "name"
+    t.string   "location"
+    t.boolean  "has_code_of_conduct"
+    t.boolean  "has_childcare"
+    t.integer  "last_years_attendance", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
