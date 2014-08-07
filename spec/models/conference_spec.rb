@@ -1,8 +1,8 @@
 describe Conference do
   let(:conference) { Conference.create  name: "GoGaGaGaGa: The Spoon Conf",
                                         location: "Seattle, WA",
-                                        has_code_of_conduct: true,
-                                        has_childcare: true
+                                        code_of_conduct: true,
+                                        childcare: true
   }
 
   it "has a name" do
@@ -17,14 +17,13 @@ describe Conference do
 
   it "may have a code of conduct" do
     # TODO write a case for default
-    expect(conference.has_code_of_conduct?).to be true
+    expect(conference.code_of_conduct?).to be true
   end
 
   it "may have childcare" do
     # TODO write a case for default
-    expect(conference.has_childcare?).to be true
+    expect(conference.childcare?).to be true
   end
-
 
   it "may have last year's attendance" do
     # TODO write a case for non-default

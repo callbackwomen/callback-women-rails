@@ -3,8 +3,8 @@ class CreateConferences < ActiveRecord::Migration
     create_table :conferences do |t|
       t.string  :name
       t.string  :location
-      t.boolean :has_code_of_conduct,   default: false
-      t.boolean :has_childcare,         default: false
+      t.boolean :code_of_conduct,       default: false
+      t.boolean :childcare,             default: false
       t.integer :last_years_attendance, default: 0
 
       t.timestamps
