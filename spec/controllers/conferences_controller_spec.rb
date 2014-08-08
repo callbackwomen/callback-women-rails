@@ -1,11 +1,7 @@
 require 'rails_helper'
 
 describe ConferencesController do
-  let!(:conference)  { Conference.create  name: "GoGaGaGaGa: The Spoon Conf",
-                                        location: "Seattle, WA",
-                                        code_of_conduct: true,
-                                        childcare: true
-  }
+  let!(:conference)  { FactoryGirl.create :conference }
 
   context "#index" do
     it "renders the conferences index" do
