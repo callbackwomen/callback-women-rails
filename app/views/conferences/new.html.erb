@@ -1,0 +1,18 @@
+<%= form_for @conference do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :location %>:
+  <%= f.text_field :location %><br />
+
+  <%= f.label :code_of_conduct %>:
+  <%= f.check_box :code_of_conduct %><br />
+
+  <%= f.label :childcare %>:
+  <%= f.check_box :childcare %><br />
+
+  <%= f.label :last_years_attendance %>:
+  <%= f.number_field :last_years_attendance %><br />
+
+  <%= f.submit %>
+<% end %>
