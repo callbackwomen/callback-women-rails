@@ -10,6 +10,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+
+gem 'omniauth', '~> 1.2.2'
+gem 'omniauth-twitter', '~> 1.0.1'
+
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'spring',        group: :development
@@ -21,5 +25,6 @@ group :test do
 end
 
 group :test, :development do
+  gem 'dotenv-rails'
   gem 'pry'
 end
