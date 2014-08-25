@@ -1,4 +1,5 @@
 require "factory_girl"
+require 'database_cleaner'
 
 RSpec.configure do |config|
   config.filter_run :focus
