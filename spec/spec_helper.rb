@@ -34,7 +34,6 @@ RSpec.configure do |config|
                     'uid' => '12345',
                     'info' => { 'name' => 'natasha' }
                   }
-  # OmniAuth.config.add_mock(:twitter, omniauth_hash)
 
   OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new(omniauth_hash)
 end
