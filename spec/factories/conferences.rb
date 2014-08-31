@@ -4,5 +4,6 @@ FactoryGirl.define do
     location "Seattle, WA"
     code_of_conduct true
     childcare true
+    topics { build_list :topic, 1 }
   end
 end
