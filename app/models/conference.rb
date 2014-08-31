@@ -9,4 +9,12 @@ class Conference < ActiveRecord::Base
   def current_call
     self.calls.present? ? self.calls.first.due_date : false
   end
+
+  def find_or_create_topic_with(name)
+    if topic = Topic.find_by(name: name)
+      self.topics.include?(topic) ? topic : self.topics << topic
+    else
+      self.topics.create(name: name)
+    end
+  end
 end
