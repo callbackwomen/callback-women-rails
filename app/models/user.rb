@@ -11,7 +11,8 @@ class User < ActiveRecord::Base
 
   private
   def self.well_formatted?(auth_hash)
-    auth_hash.fetch(:info, {})[:name].present? &&
+    auth_hash.present? &&
+      auth_hash.fetch(:info, {})[:name].present? &&
       auth_hash[:provider].present? &&
       auth_hash[:uid].present?
   end
