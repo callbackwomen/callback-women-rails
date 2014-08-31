@@ -1,4 +1,6 @@
 require "factory_girl"
+require 'database_cleaner'
+require 'omniauth'
 
 RSpec.configure do |config|
   config.filter_run :focus
@@ -25,4 +27,13 @@ RSpec.configure do |config|
   end
 
   config.include FactoryGirl::Syntax::Methods
+
+  OmniAuth.config.test_mode = true
+
+  omniauth_hash = { 'provider' => 'twitter',
+                    'uid' => '12345',
+                    'info' => { 'name' => 'natasha' }
+                  }
+
+  OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new(omniauth_hash)
 end

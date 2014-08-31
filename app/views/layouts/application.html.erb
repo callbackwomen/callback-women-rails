@@ -7,6 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<% if current_user %>
+  You are <%= current_user.name %>
+  <%= link_to "Sign out", signout_path %>
+<% else %>
+  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+<% end %>
 
 <%= yield %>
 

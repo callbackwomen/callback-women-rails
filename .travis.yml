@@ -1,0 +1,6 @@
+language: ruby
+rvm:
+  - 2.1.2
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - bin/rake db:create db:migrate

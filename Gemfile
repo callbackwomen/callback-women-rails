@@ -10,6 +10,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+
+gem 'omniauth', '~> 1.2.2'
+gem 'omniauth-twitter', '~> 1.0.1'
+
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'spring',        group: :development
@@ -18,8 +22,10 @@ group :test do
   gem 'rspec-rails', '~> 3.0.2'
   gem 'shoulda-matchers', '~> 2.6.2'
   gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'database_cleaner', '~> 1.3.0'
 end
 
 group :test, :development do
+  gem 'dotenv-rails'
   gem 'pry'
 end
