@@ -4,7 +4,7 @@ CallbackWomen's scope in intentionally limited to:
 (Not hackathons, meetups, networking groups, etc.)
 
 
-2. **Of professonial coders speaking to professional coders about topics relevant to professional programming**
+2. **Of professional coders speaking to professional coders about topics relevant to professional programming**
 (Not academia conferences, founders conferences, conferences for tech executives, etc.
 _Yes_ to conferences that meet this criteria yet also cultivate/welcome participation of coders who aren't _yet_ professionals. For example, people who are aspiring, studying, or apprenticing.)
 
