@@ -30,6 +30,8 @@ CallbackWomen's scope in intentionally limited. Each _Call for Proposals_ (CFP) 
 1. **Registration is free for speakers**
 
 	Free ticket to all related days of the conference, for at least one person presenting the session. So, for example, a tutorial presenter gets free ticket to at least all of the conference's days of tutorial sessions; whereas a session talk presenter gets free ticket to least all of the conference's days of session talks.
+	
+	Conference may be eligible if it publicly advertises an option for any and all speakers to get the registration fee waived upon request.
 
 
 ## Screening
