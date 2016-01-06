@@ -42,6 +42,8 @@ describe Conference do
     expect(conference.last_years_attendance).to eq 0
   end
 
-  it "has many topics"
+  it "has many topics" do
+    expect(conference.topics.map(&:name)).to include "ruby"
+  end
   it "has many talk lengths"
 end
