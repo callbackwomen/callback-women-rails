@@ -35,4 +35,4 @@ CallbackWomen's scope in intentionally limited. Each _Call for Proposals_ (CFP) 
 
 
 ## Screening
-CallbackWomen promotes CFPs for nearly 1000 conferences per year. At this time it is not possible to pre-screen all CFPs for eligiblity. So occasionally an ineligible one is promoted by accident. When you notice a mistake, do ping [@callbackwomen](https://twitter.com/callbackwomen) on Twitter. Thanks!
+CallbackWomen promotes CFPs for more than 1000 conferences per year. At this time it is not possible to pre-screen all CFPs for eligiblity. So occasionally an ineligible one is promoted by accident. When you notice a mistake, do ping [@callbackwomen](https://twitter.com/callbackwomen) on Twitter. Thanks!
